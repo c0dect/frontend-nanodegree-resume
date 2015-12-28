@@ -7,11 +7,11 @@ This is empty on purpose! Your code to build the resume will go here.
   'role': 'Software Developer',
   'contacts': {
     'mobile': "<a href='tel:5555555555'>555.555.5555</a>",
-    'email': "<a href='mailto:allan.reyes@alum.mit.edu'>allan.reyes@alum.mit.edu</a>",
-    'github': "<a href='http://goo.gl/ed7eMV'>c0dect</a>",
+    'email': "<a href='mailto:vikram1791@gmail.com'>vikram1791@gmail.com</a>",
+    'github': "<a href='https://github.com/c0dect'>c0dect</a>",
     'location': "<a href='#'>Pune</a>"
   },
-  'welcomeMessage': 'Experience leading the brightest minds in engineering and the bravest souls in the military.',
+  'welcomeMessage': 'Sample resume project to learn Javascript.',
   'skills': ['Software Engineering', 'Web Development', 'Product Design', 
   			'Go Lang', 'Python', 'Django', 'JavaScript', 'C++', 'Linux', 'GitHub']
 };
