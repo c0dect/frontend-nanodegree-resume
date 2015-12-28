@@ -26,6 +26,24 @@ var work = {
     }
   ]};
 
+var projects = {
+    "projects": [
+            {
+                        "title": "Image Classification",
+                        "datesWorked": "August 2015 - November 2015",
+                        "description": "Created an image classification tool to classify images under various identified categories", 
+                        "url": "https://github.com/c0dect/image-processor-OpenCV"
+                    },
+            {
+                        "title": "Online Portfolio",
+                        "datesWorked": "December 2015",
+                        "description": "Created an online portfolio of work as part of Udacity's Front-End Web Developer " +
+                        "Nanodegree.",
+                        "url": "https://github.com/c0dect/frontend-nanodegree-resume"
+            }        
+    ]
+};
+
 var name = HTMLheaderName.replace("%data%", bio.name);
 var role = HTMLheaderRole.replace("%data%", bio.role);
 $('#header').prepend(role).prepend(name);
