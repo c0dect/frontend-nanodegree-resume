@@ -41,8 +41,23 @@ var projects = {
                         "Nanodegree.",
                         "url": "https://github.com/c0dect/frontend-nanodegree-resume"
             }        
-    ]
+    ],
+    "display": function() {
+        for(var index in this.projects) {
+            $("#projects").append(HTMLprojectStart);
+            var formattedTitle = HTMLprojectTitle.replace('%data%', this.projects[index].title);
+            var formattedDates = HTMLprojectDates.replace('%data%', this.projects[index].datesWorked);
+            var formattedDescription = HTMLprojectDescription.replace('%data%', this.projects[index].description);
+           
+            $(".project-entry:last").append(formattedTitle);
+            $(".project-entry:last").append(formattedDates);
+            $(".project-entry:last").append(formattedDescription);
+
+        }       
+    }
 };
+
+projects.display();
 
 var name = HTMLheaderName.replace("%data%", bio.name);
 var role = HTMLheaderRole.replace("%data%", bio.role);
@@ -85,3 +100,5 @@ function inName(name) {
 }
 
 inName(bio.name);
+
+$("#mapDiv").append(googleMap);
