@@ -13,8 +13,29 @@ This is empty on purpose! Your code to build the resume will go here.
   },
   'welcomeMessage': 'Sample resume project to learn Javascript.',
   'skills': ['Software Engineering', 'Web Development', 'Product Design', 
-  			'Go Lang', 'Python', 'Django', 'JavaScript', 'C++', 'Linux', 'GitHub']
+  			'Go Lang', 'Python', 'Django', 'JavaScript', 'C++', 'Linux', 'GitHub'],
+  'biopic': 'images/fry.jpg',
+  'display': function() {
+
+    var name = HTMLheaderName.replace("%data%", this.name);
+    var role = HTMLheaderRole.replace("%data%", this.role);
+    $('#header').prepend(role).prepend(name);
+
+    if(this.skills.length > 0){
+      $("#header").append(HTMLskillsStart);
+      for (var i = this.skills.length - 1; i >= 0; i--) {
+        var formattedSkill = HTMLskills.replace("%data%", this.skills[i]);
+        $("#skills").append(formattedSkill);
+    };
+
+    var message = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
+    var bioPic = HTMLbioPic.replace('%data%',this.biopic);
+    $('#header').append(message).append(bioPic);
+    }
+  }
 };
+
+bio.display();
 
 var work = {
   'jobs': [
@@ -59,18 +80,6 @@ var projects = {
 
 projects.display();
 
-var name = HTMLheaderName.replace("%data%", bio.name);
-var role = HTMLheaderRole.replace("%data%", bio.role);
-$('#header').prepend(role).prepend(name);
-
-
-if(bio.skills.length > 0){
- 	$("#header").append(HTMLskillsStart);
- 	for (var i = bio.skills.length - 1; i >= 0; i--) {
- 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
- 		$("#skills").append(formattedSkill);
- 	};
-}
 
 function displayWork(){
   for(var index in work.jobs) {
